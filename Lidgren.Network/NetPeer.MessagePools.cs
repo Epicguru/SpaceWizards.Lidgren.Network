@@ -194,7 +194,7 @@ namespace Lidgren.Network
 				Recycle(im);
 		}
 
-		internal void Recycle(NetOutgoingMessage msg)
+		public void Recycle(NetOutgoingMessage msg)
 		{
 			if (m_outgoingMessagesPool == null)
 				return;
