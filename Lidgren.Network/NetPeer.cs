@@ -89,6 +89,13 @@ namespace Lidgren.Network
 		}
 
 		/// <summary>
+		/// Gets a read-only list of all connections.
+		/// This is not thread safe.
+		/// Avoids the allocation and garbage collection caused by using <see cref="Connections"/>.
+		/// </summary>
+		public IList<NetConnection> ConnectionsNoAlloc => m_connections;
+
+		/// <summary>
 		/// Gets the number of active connections
 		/// </summary>
 		public int ConnectionsCount
